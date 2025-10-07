@@ -1,0 +1,182 @@
+html {
+    background-color: #2B4A7A;
+    padding-left: 11%;
+    padding-right: 11%;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+Body {
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.pc_menu {
+    list-style: none;
+    text-align: center;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding-top: 0px;
+    border-width: 1px;
+}
+.pc_menu li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 65px;
+    padding-top: 50px;
+    text-align: left;
+}
+
+.grabber {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding: 10px;
+}
+
+.grabber div{
+    text-align: center;
+}
+
+.brain_img{
+    width: 80%
+
+}
+h2 {
+    padding: 10px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.research {
+    border: none;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    background-color: #2B4A9A;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.research:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.history{
+    padding-left: 10px;
+    display: flex;
+
+}
+
+.history img{
+    margin: auto;
+}
+
+.history p{
+    width: 50%;
+}
+
+h3 {
+    font-size: 50px;
+    padding-left: 10px;
+}
+.history p {
+    text-indent: 40px;
+    font-size: 25px;
+}
+p {
+    font-size: 25px;
+}
+
+.footer {
+    background-color: #24292f;
+    color: white;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.footer_menu {
+    list-style: none;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #24292f;
+}
+.footer li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.footer a{
+    color: white !important;
+}
+
+.grabber_about {
+    display:  grid;
+    grid-template-columns: auto auto;
+    gap: 0px;
+    padding: 10px;
+}
+.grabber_about div{
+    text-align: center;
+}
+.grabber_about h1{
+    font-size: 60px;
+    text-align: left;
+}
+
+.grabber_about img{
+    width: 100%;
+}
+
+.about_title{
+    width: 100%;
+}
+.about_img{
+    width: 30%;
+    padding-left: 200px;
+    float: right;
+}
+
+.footer h2 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.image-deal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.implications_img{
+    width: 40%;
+    padding-left: 100px;
+}
+
+h1{
+    padding-left: 10px;
+}
