@@ -180,3 +180,16 @@ p {
 h1{
     padding-left: 10px;
 }
+
+form{
+    padding-left: 10px;
+}
+label{
+    padding-left: 5px;
+}
+
+input{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+

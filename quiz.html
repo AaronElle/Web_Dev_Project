@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Copilot</title>
+
+</head>
+<body>
+
+<!-- The Menu at the top of the screen -->
+<ul class="pc_menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="findings.html">Findings</a></li>
+    <li><a href="implications.html">Implications</a></li>
+    <li><a href="references.html">References</a></li>
+    <li><a href="concepts.html">Concepts</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+</ul>
+
+<!-- Two nested <div> to get content next to each other-->
+<div class="grabber">
+    <div><h1 class="heading">Think Like an AI: The Ultimate GitHub Copilot Quiz</h1></div>
+    <div><img class="brain_img" src="brain.png"></div>
+</div>
+<h2>Testing your knowledge, and seeing if you pay attention.</h2>
+
+<!-- Fancy button for aesthetic purposes -->
+<div style="padding:10px; background-color: #24292f; text-align:center;">
+    <button class="research" onclick="location.href='#targetSection'">Take the Quiz</button>
+</div>
+
+
+
+<h3 id="targetSection">CoPilot Quiz</h3>
+
+<div class="quiz">
+
+    <form id="quiz">
+        <p>1. What Year was GitHub CoPilot Founded?</p>
+        <p id="q1_c" style="color: green;"></p>
+        <p id="q1_i" style="color: red;"></p>
+        <input type="radio" name="q1" value="1">
+        <label>a.) 2020</label> <br>
+        <input type="radio" name="q1" value="0">
+        <label>b.) 2019</label> <br>
+        <input type="radio" name="q1" value="0">
+        <label>c.) 1776</label> <br>
+        <input type="radio" name="q1" value="0">
+        <label>d.) 2021</label> <br>
+
+        <p>2. What is the best way to use AI in software programming?</p>
+        <p id="q2_c" style="color: green;"></p>
+        <p id="q2_i" style="color: red;"></p>
+        <input type="radio" name="q2" value="0">
+        <label>a.) To cheat.</label> <br>
+        <input type="radio" name="q2" value="0">
+        <label>b.) To speed things up!</label> <br>
+        <input type="radio" name="q2" value="1">
+        <label>c.) As a helpful tool.</label> <br>
+        <input type="radio" name="q2" value="0">
+        <label>d.) As a form of research.</label> <br>
+
+        <p>3. Will AI replace Web Developers?</p>
+        <p id="q3_c" style="color: green;"></p>
+        <p id="q3_i" style="color: red;"></p>
+        <input type="radio" name="q3" value="0">
+        <label>a.) Yes</label> <br>
+        <input type="radio" name="q3" value="1">
+        <label>b.) No</label> <br>
+        <input type="radio" name="q3" value="0">
+        <label>c.) Maybe</label> <br>
+        <input type="radio" name="q3" value="0">
+        <label>d.) 2:14 a.m. EDT on August 29, 1997</label> <br>
+
+        <p>4.<input type="text" name="q4" value="answer here"> :the 2nd leading indicator, where a programming workforce is prepped for seamless integration with GitHub Copilot.</p> <br>
+        <p id="q4_c" style="color: green;"></p>
+        <p id="q4_i" style="color: red;"></p>
+
+        <p>5. What are the most well-known risks of AI?</p>
+        <p id="q5_c" style="color: green;"></p>
+        <p id="q5_i" style="color: red;"></p>
+        <input type="checkbox" name="q5" value="1">
+        <label>a.) Malicious Use</label> <br>
+        <input type="checkbox" name="q5" value="1">
+        <label>b.) The AI Race</label> <br>
+        <input type="checkbox" name="q5" value="1">
+        <label>c.) Organizational Risks</label> <br>
+        <input type="checkbox" name="q5" value="1">
+        <label>d.) Rogue AIs</label> <br>
+        <input type="checkbox" name="q5" value="-1">
+        <label>e.) Y2K</label> <br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+    <p id="result"></p>
+</div>
+
+<div style=" justify-content:center;">
+<button class="research" id="hidden_button" onClick="window.location.reload();" style="display: none;">Retry?</button>
+</div>
+
+<div style="padding: 50px 0;"></div>
+
+<!-- The footer -->
+<div class="footer">
+    <h2>OurWebsite.com</h2>
+    <ul class="footer_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="findings.html">Findings</a></li>
+        <li><a href="implications.html">Implications</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="concepts.html">Concepts</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+    <h2>© 2025 GitHub Copilot Research | Designed by Aaron Elle & Luke Craven</h2>
+</div>
+
+<script>
+        document.getElementById("quiz").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            let q1Value = 0;
+            let q2Value = 0;
+            let q3Value = 0;
+            let q5Value = 0;
+
+            for ( let i = 1; i <= 3; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                score += parseInt(selected.value);
+                if (i === 1) q1Value = parseInt(selected.value);
+                if (i === 2) q2Value = parseInt(selected.value);
+                if (i === 3) q3Value = parseInt(selected.value);
+                }
+            }
+
+            const q4 = document.querySelector(`input[name="q4"]`).value.trim().toLowerCase();
+            let q4Correct = false;
+            if (q4 === "adoption") {
+                score += 1;
+                q4Correct = true;
+            }
+
+            const checkboxes = document.querySelectorAll(`input[name="q5"]:checked`);
+            checkboxes.forEach(box => {
+                q5Value += parseInt(box.value);
+                score += q5Value;
+            });
+
+            // outputs the score
+            document.getElementById("result").textContent = `Your Score is ${score} out of 8!`;
+
+            //try again button
+            const retryButton = document.getElementById("hidden_button");
+            retryButton.style.display = "flex";
+
+
+            // outputs the responses
+            if (q1Value === 1) {
+                document.getElementById("q1_c").textContent = "Correct!";
+                document.getElementById("q1_i").textContent = "";
+            } else {
+                document.getElementById("q1_i").textContent = "Incorrect :( The correct answer was a.";
+                document.getElementById("q1_c").textContent = "";
+            }
+            if (q2Value === 1) {
+                document.getElementById("q2_c").textContent = "Correct!";
+                document.getElementById("q2_i").textContent = "";
+            } else {
+                document.getElementById("q2_i").textContent = "Incorrect :( The correct answer was c.";
+                document.getElementById("q2_c").textContent = "";
+            }
+            if (q3Value === 1) {
+                document.getElementById("q3_c").textContent = "Correct!";
+                document.getElementById("q3_i").textContent = "";
+            } else {
+                document.getElementById("q3_i").textContent = "Incorrect :( The correct answer was b.";
+                document.getElementById("q3_c").textContent = "";
+            }
+            if (q4Correct) {
+                document.getElementById("q4_c").textContent = "Correct!";
+                document.getElementById("q4_i").textContent = "";
+            } else {
+                document.getElementById("q4_i").textContent = "Incorrect :( The correct answer was Adoption.";
+                document.getElementById("q4_c").textContent = "";
+            }
+            if (q5Value === 4) {
+                document.getElementById("q5_c").textContent = "Correct!";
+                document.getElementById("q5_i").textContent = "";
+            } else {
+                document.getElementById("q5_i").textContent = "Incorrect :( The correct answer was a, b, c, d.";
+                document.getElementById("q5_c").textContent = "";
+            }
+
+
+        });
+    </script>
+</body>
+</html>
