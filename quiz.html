@@ -148,8 +148,8 @@
             const checkboxes = document.querySelectorAll(`input[name="q5"]:checked`);
             checkboxes.forEach(box => {
                 q5Value += parseInt(box.value);
-                score += q5Value;
             });
+            score += q5Value;
 
             // outputs the score
             document.getElementById("result").textContent = `Your Score is ${score} out of 8!`;
